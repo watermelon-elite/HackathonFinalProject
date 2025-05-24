@@ -9,7 +9,6 @@ import SwiftUI
 import AVKit
 
 struct AudioPlayerView: View {
-    let audioFileName = "bird"
     
     @State private var player: AVAudioPlayer?
     
@@ -61,7 +60,7 @@ struct AudioPlayerView: View {
     }
     
     private func setupAudio() {
-        guard let url = Bundle.main.url(forResource: audioFileName, withExtension: "mp3") else {
+        guard let url = Bundle.main.url(forResource: mouse.rawAudio, withExtension: "mp3") else {
             return
         }
         
