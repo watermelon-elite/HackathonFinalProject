@@ -98,9 +98,3 @@ struct AudioPlayerView: View {
         return String(format: "%02d:%02d", minutes, seconds)
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
