@@ -11,12 +11,18 @@ struct MiceDetails: View {
     var body: some View {
         VStack {
             Form {
+                Section(header: Text("Listen to Audio")) {
+                    NavigationLink(destination: AudioPlayerView(mouse: mouse)) {
+                        Text("AUDIO")
+                    }
+                }
                 Section(header: Text("Team Current Progress")) {
                     Text("Analyze loudness and explain progress")
                 }
                 Section(header: Text("Team Transcript Summary")) {
                     Text("")
                 }
+                
             }
             ScrollView {
                 Text((mouse.transcript!.trimmingCharacters(in: .whitespacesAndNewlines) == "" ? "No Transcript" : mouse.transcript) ?? "No Transcript")

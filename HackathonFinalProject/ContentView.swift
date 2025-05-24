@@ -31,6 +31,12 @@ struct ContentView: View {
                         
                     }
                 }
+                ToolbarItem {
+                    Button("CREATE DUMMY MOUSE") {
+                        addDummyMouse()
+                    }
+                }
+                
             }
         }
     }
@@ -40,7 +46,7 @@ struct ContentView: View {
     func addDummyMouse() {
         let mouse = Mouse(context: moc)
         mouse.id = UUID()
-        mouse.name = "Mouse #2"
+        mouse.name = "Mouse #1"
         mouse.transcript = ""
         if moc.hasChanges {
             try? moc.save()

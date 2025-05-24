@@ -15,6 +15,7 @@
 		0F53D2B82DE2726D00BA57CA /* MiceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2B72DE2726D00BA57CA /* MiceDetails.swift */; };
 		0F53D2BA2DE2728800BA57CA /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2B92DE2728800BA57CA /* DataPersistence.swift */; };
 		0F53D2BD2DE272A400BA57CA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2BB2DE272A400BA57CA /* DataModel.xcdatamodeld */; };
+		0F53D2C02DE278FA00BA57CA /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2BF2DE278FA00BA57CA /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		0F53D2B72DE2726D00BA57CA /* MiceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiceDetails.swift; sourceTree = "<group>"; };
 		0F53D2B92DE2728800BA57CA /* DataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
 		0F53D2BC2DE272A400BA57CA /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		0F53D2BF2DE278FA00BA57CA /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,7 @@
 				0F53D2AB2DE2721800BA57CA /* Assets.xcassets */,
 				0F53D2AD2DE2721800BA57CA /* Preview Content */,
 				0F53D2B52DE2725200BA57CA /* FetchAudio.swift */,
-				0F53D2B72DE2726D00BA57CA /* MiceDetails.swift */,
+				0F53D2BE2DE278DF00BA57CA /* MiceDetails */,
 				0F53D2B92DE2728800BA57CA /* DataPersistence.swift */,
 				0F53D2BB2DE272A400BA57CA /* DataModel.xcdatamodeld */,
 			);
@@ -77,6 +79,15 @@
 				0F53D2AE2DE2721800BA57CA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0F53D2BE2DE278DF00BA57CA /* MiceDetails */ = {
+			isa = PBXGroup;
+			children = (
+				0F53D2B72DE2726D00BA57CA /* MiceDetails.swift */,
+				0F53D2BF2DE278FA00BA57CA /* AudioPlayer.swift */,
+			);
+			path = MiceDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 				0F53D2BD2DE272A400BA57CA /* DataModel.xcdatamodeld in Sources */,
 				0F53D2BA2DE2728800BA57CA /* DataPersistence.swift in Sources */,
 				0F53D2A82DE2721500BA57CA /* HackathonFinalProjectApp.swift in Sources */,
+				0F53D2C02DE278FA00BA57CA /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
