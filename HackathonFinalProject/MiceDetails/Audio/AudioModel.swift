@@ -10,18 +10,55 @@ import AVFoundation
 import SwiftUI
 
 class AudioModel: ObservableObject {
-    let startEpoch = 1716528000
+    let startEpoch = 1716528000 //CHANGE LATER
     let endEpoch = 1716528010
-
-    let baseURL = "https://example.com/audio/" // Your base URL
+    let baseURL = "http://143.244.173.85/mic1/get/"
+    let passwordParam = "?password/=WeLuv2Snoop"
     var downloadedFileURLs: [URL] = []
 
     let group = DispatchGroup()
+    func getEpochs() {
+        guard let url = URL(string: "http://143.244.173.85/mic1/info/?password=WeLuv2Snoop") else {
+            print("Invalid URL")
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        // Optional: If the server requires a specific content type, you can set headers like this:
+        // request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        // Optional: If you need to include a body, you can do it like this:
+        // request.httpBody = try? JSONSerialization.data(withJSONObject: ["key": "value"])
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            print(data)
+            if let error = error {
+                print("Error making POST request: \(error)")
+                return
+            }
+
+            guard let data = data else {
+                print("No data received")
+                return
+            }
+            
+            if let responseString = String(data: data, encoding: .utf8) {
+                print("Raw response: \(responseString)")
+            }
+
+            // Try to decode JSON if expected
+        }
+
+        task.resume()
+    }
+    
     func fetchAudio() {
 
         for timestamp in startEpoch...endEpoch {
             group.enter()
-            let url = "\(baseURL)\(timestamp).wav"
+            let url = "\(baseURL)\(timestamp).wav\(passwordParam)"
             let fileName = "\(timestamp).wav"
             
             FileManager.downloadAndSaveAudio(from: url, fileName: fileName) { result in

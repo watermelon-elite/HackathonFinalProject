@@ -11,7 +11,7 @@
 		0F53D2AA2DE2721500BA57CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2A92DE2721500BA57CA /* ContentView.swift */; };
 		0F53D2AC2DE2721800BA57CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F53D2AB2DE2721800BA57CA /* Assets.xcassets */; };
 		0F53D2AF2DE2721800BA57CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F53D2AE2DE2721800BA57CA /* Preview Assets.xcassets */; };
-		0F53D2B62DE2725200BA57CA /* FetchAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2B52DE2725200BA57CA /* FetchAudio.swift */; };
+		0F53D2B62DE2725200BA57CA /* AudioExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2B52DE2725200BA57CA /* AudioExtension.swift */; };
 		0F53D2B82DE2726D00BA57CA /* MiceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2B72DE2726D00BA57CA /* MiceDetails.swift */; };
 		0F53D2BA2DE2728800BA57CA /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2B92DE2728800BA57CA /* DataPersistence.swift */; };
 		0F53D2C02DE278FA00BA57CA /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2BF2DE278FA00BA57CA /* AudioPlayer.swift */; };
@@ -22,12 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F1F6E032DE3581D00693C85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0F53D2A42DE2721500BA57CA /* HackathonFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F53D2A72DE2721500BA57CA /* HackathonFinalProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonFinalProjectApp.swift; sourceTree = "<group>"; };
 		0F53D2A92DE2721500BA57CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0F53D2AB2DE2721800BA57CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F53D2AE2DE2721800BA57CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0F53D2B52DE2725200BA57CA /* FetchAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAudio.swift; sourceTree = "<group>"; };
+		0F53D2B52DE2725200BA57CA /* AudioExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioExtension.swift; sourceTree = "<group>"; };
 		0F53D2B72DE2726D00BA57CA /* MiceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiceDetails.swift; sourceTree = "<group>"; };
 		0F53D2B92DE2728800BA57CA /* DataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
 		0F53D2BF2DE278FA00BA57CA /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 		0F53D2A62DE2721500BA57CA /* HackathonFinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				0F1F6E032DE3581D00693C85 /* Info.plist */,
 				0F53D2A72DE2721500BA57CA /* HackathonFinalProjectApp.swift */,
 				0F53D2C42DE2905F00BA57CA /* CODE.swift */,
 				0F53D2A92DE2721500BA57CA /* ContentView.swift */,
@@ -101,7 +103,7 @@
 			children = (
 				EF87E7062DE2B32500D4CB55 /* Speech Recognition */,
 				0F53D2BF2DE278FA00BA57CA /* AudioPlayer.swift */,
-				0F53D2B52DE2725200BA57CA /* FetchAudio.swift */,
+				0F53D2B52DE2725200BA57CA /* AudioExtension.swift */,
 				0F53D2C12DE280DE00BA57CA /* AudioModel.swift */,
 			);
 			path = Audio;
@@ -187,7 +189,7 @@
 			files = (
 				0F53D2B82DE2726D00BA57CA /* MiceDetails.swift in Sources */,
 				0F53D2C52DE2905F00BA57CA /* CODE.swift in Sources */,
-				0F53D2B62DE2725200BA57CA /* FetchAudio.swift in Sources */,
+				0F53D2B62DE2725200BA57CA /* AudioExtension.swift in Sources */,
 				0F53D2AA2DE2721500BA57CA /* ContentView.swift in Sources */,
 				0F53D2BA2DE2728800BA57CA /* DataPersistence.swift in Sources */,
 				0F53D2A82DE2721500BA57CA /* HackathonFinalProjectApp.swift in Sources */,
@@ -328,9 +330,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HackathonFinalProject/Preview Content\"";
-				DEVELOPMENT_TEAM = W62GSPN4YJ;
+				DEVELOPMENT_TEAM = B86FGJK4BP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HackathonFinalProject/Info.plist;
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Need to do speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -358,9 +361,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HackathonFinalProject/Preview Content\"";
-				DEVELOPMENT_TEAM = W62GSPN4YJ;
+				DEVELOPMENT_TEAM = B86FGJK4BP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HackathonFinalProject/Info.plist;
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Need to do speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

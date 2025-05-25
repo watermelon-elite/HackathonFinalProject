@@ -9,6 +9,7 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var moc
     @EnvironmentObject var transcriptionModel: speechToText
+    @EnvironmentObject var audioModel: AudioModel
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var mice: FetchedResults<Mouse>
     @State var dest: URL? = nil
     
@@ -25,7 +26,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem {
                     Button("Get webserver data") {
-                        /*FileManager.downloadAndSaveAudio(from: "https://jmp.sh/s/nnQLSqD6uKkTlucisH1f", fileName: "PWEASEWORK") { result in
+                        FileManager.downloadAndSaveAudio(from: "https://jmp.sh/s/nnQLSqD6uKkTlucisH1f", fileName: "PWEASEWORK") { result in
                             switch result {
                             case .success(let fileURL):
                                 addDummyMouse(fileURL)
@@ -33,7 +34,7 @@ struct ContentView: View {
                                 print("Failed to download \(error)")
                             }
                             
-                        }*/
+                        }
                         
                         
                     }
@@ -46,15 +47,14 @@ struct ContentView: View {
                 
             }
             .onAppear {
-                transcriptionModel.requestTranscribePermissions()
-                addFile()
-                
+                audioModel.getEpochs()
+                transcriptionModel.requestTranscribePermissions()                
             }
         }
     }
     
     
-    func addFile() {
+    /*func addFile() {
         var sourceFile: URL? = nil
         var work: URL? = nil
         var fileName = "Items.m4a" // Change this to your actual filename
@@ -87,7 +87,7 @@ struct ContentView: View {
         } catch {
             print("Failed to copy file: \(error.localizedDescription)")
         }
-    }
+    }*/
     
     func addDummyMouse(_ file: URL) {
         let testPath = "/Users/kenshu/Downloads/30th St N 5.m4a"

@@ -18,34 +18,37 @@ extension FileManager {
             completion(.failure(NSError(domain: "Invalid URL", code: 1)))
             return
         }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
         
+        // Optional: Add HTTP body or headers if required by API
+        // request.httpBody = ...
+        // request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
         let session = URLSession.shared
-        let task = session.dataTask(with: url) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.failure(error))
                 return
             }
-            
+
             guard let data = data else {
                 completion(.failure(NSError(domain: "No data received", code: 2)))
                 return
             }
-            
+
             do {
-                // Get documents directory
                 let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
                 let fileURL = documentsURL.appendingPathComponent(fileName)
-                
-                // Write data to file
                 try data.write(to: fileURL)
-                
                 print("Audio saved to: \(fileURL)")
                 completion(.success(fileURL))
             } catch {
                 completion(.failure(error))
             }
         }
-        
+
         task.resume()
     }
     
