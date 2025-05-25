@@ -20,7 +20,7 @@ struct MiceDetails: View {
                     Text("Analyze loudness and explain progress")
                 }
                 Section(header: Text("Team Transcript Summary")) {
-                    Text("")
+                    Text("No Summary Available")
                 }
                 
             }

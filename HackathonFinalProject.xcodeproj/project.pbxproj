@@ -14,10 +14,11 @@
 		0F53D2B62DE2725200BA57CA /* FetchAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2B52DE2725200BA57CA /* FetchAudio.swift */; };
 		0F53D2B82DE2726D00BA57CA /* MiceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2B72DE2726D00BA57CA /* MiceDetails.swift */; };
 		0F53D2BA2DE2728800BA57CA /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2B92DE2728800BA57CA /* DataPersistence.swift */; };
-		0F53D2BD2DE272A400BA57CA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2BB2DE272A400BA57CA /* DataModel.xcdatamodeld */; };
 		0F53D2C02DE278FA00BA57CA /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2BF2DE278FA00BA57CA /* AudioPlayer.swift */; };
 		0F53D2C22DE280DE00BA57CA /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2C12DE280DE00BA57CA /* AudioModel.swift */; };
 		0F53D2C52DE2905F00BA57CA /* CODE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53D2C42DE2905F00BA57CA /* CODE.swift */; };
+		EF87E7052DE2B05500D4CB55 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF87E7032DE2B05500D4CB55 /* DataModel.xcdatamodeld */; };
+		EF87E7082DE2B33600D4CB55 /* Transcription.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87E7072DE2B32D00D4CB55 /* Transcription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,10 +30,11 @@
 		0F53D2B52DE2725200BA57CA /* FetchAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAudio.swift; sourceTree = "<group>"; };
 		0F53D2B72DE2726D00BA57CA /* MiceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiceDetails.swift; sourceTree = "<group>"; };
 		0F53D2B92DE2728800BA57CA /* DataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
-		0F53D2BC2DE272A400BA57CA /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		0F53D2BF2DE278FA00BA57CA /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		0F53D2C12DE280DE00BA57CA /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
 		0F53D2C42DE2905F00BA57CA /* CODE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CODE.swift; sourceTree = "<group>"; };
+		EF87E7042DE2B05500D4CB55 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		EF87E7072DE2B32D00D4CB55 /* Transcription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 		0F53D29B2DE2721500BA57CA = {
 			isa = PBXGroup;
 			children = (
+				EF87E7032DE2B05500D4CB55 /* DataModel.xcdatamodeld */,
 				0F53D2A62DE2721500BA57CA /* HackathonFinalProject */,
 				0F53D2A52DE2721500BA57CA /* Products */,
 			);
@@ -72,7 +75,6 @@
 				0F53D2AD2DE2721800BA57CA /* Preview Content */,
 				0F53D2BE2DE278DF00BA57CA /* MiceDetails */,
 				0F53D2B92DE2728800BA57CA /* DataPersistence.swift */,
-				0F53D2BB2DE272A400BA57CA /* DataModel.xcdatamodeld */,
 			);
 			path = HackathonFinalProject;
 			sourceTree = "<group>";
@@ -97,11 +99,20 @@
 		0F53D2C32DE2811B00BA57CA /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				EF87E7062DE2B32500D4CB55 /* Speech Recognition */,
 				0F53D2BF2DE278FA00BA57CA /* AudioPlayer.swift */,
 				0F53D2B52DE2725200BA57CA /* FetchAudio.swift */,
 				0F53D2C12DE280DE00BA57CA /* AudioModel.swift */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		EF87E7062DE2B32500D4CB55 /* Speech Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				EF87E7072DE2B32D00D4CB55 /* Transcription.swift */,
+			);
+			path = "Speech Recognition";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,9 +189,10 @@
 				0F53D2C52DE2905F00BA57CA /* CODE.swift in Sources */,
 				0F53D2B62DE2725200BA57CA /* FetchAudio.swift in Sources */,
 				0F53D2AA2DE2721500BA57CA /* ContentView.swift in Sources */,
-				0F53D2BD2DE272A400BA57CA /* DataModel.xcdatamodeld in Sources */,
 				0F53D2BA2DE2728800BA57CA /* DataPersistence.swift in Sources */,
 				0F53D2A82DE2721500BA57CA /* HackathonFinalProjectApp.swift in Sources */,
+				EF87E7082DE2B33600D4CB55 /* Transcription.swift in Sources */,
+				EF87E7052DE2B05500D4CB55 /* DataModel.xcdatamodeld in Sources */,
 				0F53D2C22DE280DE00BA57CA /* AudioModel.swift in Sources */,
 				0F53D2C02DE278FA00BA57CA /* AudioPlayer.swift in Sources */,
 			);
@@ -316,9 +328,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HackathonFinalProject/Preview Content\"";
-				DEVELOPMENT_TEAM = B86FGJK4BP;
+				DEVELOPMENT_TEAM = W62GSPN4YJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Need to do speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -345,9 +358,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HackathonFinalProject/Preview Content\"";
-				DEVELOPMENT_TEAM = B86FGJK4BP;
+				DEVELOPMENT_TEAM = W62GSPN4YJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Need to do speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -390,14 +404,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0F53D2BB2DE272A400BA57CA /* DataModel.xcdatamodeld */ = {
+		EF87E7032DE2B05500D4CB55 /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0F53D2BC2DE272A400BA57CA /* DataModel.xcdatamodel */,
+				EF87E7042DE2B05500D4CB55 /* DataModel.xcdatamodel */,
 			);
-			currentVersion = 0F53D2BC2DE272A400BA57CA /* DataModel.xcdatamodel */;
-			name = DataModel.xcdatamodeld;
-			path = /Users/thurstonreese/Desktop/HackathonFinalProject/HackathonFinalProject/DataModel.xcdatamodeld;
+			currentVersion = EF87E7042DE2B05500D4CB55 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
